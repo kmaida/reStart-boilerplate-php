@@ -6,7 +6,7 @@
 
 	<!-- JavaScript -->
 	<script src="js/libs/jquery-1.10.2.js"></script>
-	<script src="js/libs/jRespond.js"></script>
+	<script src="js/libs/jRespond.js"></script>	<!-- https://github.com/ten1seven/jRespond -->
   	<script src="js/script.js"></script>
 	
 	<!-- Google Analytics -->

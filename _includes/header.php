@@ -13,7 +13,7 @@
 	
 	<title><?php echo $pageTitle; ?> | reStart</title>
 	<link href="css/styles.css" rel="stylesheet" media="all">
-	<script src="js/libs/modernizr.js"></script>
+	<script src="js/libs/modernizr.js"></script> <!-- http://modernizr.com / https://github.com/Modernizr/Modernizr -->
 </head>
 
 <body class="<?php echo $navCurrent; ?>">
