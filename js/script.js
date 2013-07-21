@@ -17,6 +17,7 @@ var res = {
 	init: function() {
 		// listeners for breakpoints should be defined before the respond() function is called
 		res.testRespond();
+		res.nav();
 		
 		// set up responsive javascript
 		res.setupRes();
@@ -78,7 +79,38 @@ var res = {
 			
 			console.log('Initial pageload:', isFirstLoad, ' Entering:' + e.curBP, ' Leaving:', e.prevBP);
 		});
+	},
+	
+//--- Offcanvas Navigation
+	nav: function() {
+		var $offcanvas = $('.wrapper-offcanvas'),
+			$canvas = $('.wrapper-canvas'),
+			$toggle = $canvas.find('.toggle-offcanvas');
+		
+		res.$body.on('enter-small', function(e) {
+			res.$body.addClass('nav-closed');
+			
+			$toggle.on('click', function(e) {
+				e.preventDefault();
+				
+				if (res.$body.hasClass('nav-closed')) {
+					res.$body
+						.removeClass('nav-closed')
+						.addClass('nav-open');
+				} else {
+					res.$body
+						.removeClass('nav-open')
+						.addClass('nav-closed');
+				}
+			});		
+		});
+		
+		res.$body.on('enter-large', function(e) {
+			$toggle.off('click');
+			res.$body.removeClass('nav-open nav-closed');
+		});
 	}
+	
 };
 
 //------------------------------------------------- DOCUMENT READY

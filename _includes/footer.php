@@ -1,6 +1,8 @@
-	<footer id="footer-global" class="footer-global">
-		<p>&copy; <?php echo date('Y'); ?></p>
-	</footer>
+		<footer id="footer-global" class="footer-global">
+			<p>&copy; <?php echo date('Y'); ?></p>
+		</footer>
+		
+	</div> <!-- /.wrapper-canvas -->
 
 	<!-- JavaScript -->
 	<script src="js/libs/jquery-1.10.2.js"></script>

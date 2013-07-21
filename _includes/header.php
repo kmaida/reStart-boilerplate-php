@@ -27,14 +27,20 @@
 </head>
 
 <body class="<?php echo $navCurrent; ?>">
-	
-	<header id="header-global" class="header-global">
 
+	<div class="wrapper-offcanvas">
 		<nav id="nav-global" class="nav-global">
 			<ul>
 				<li class="<?php if ($navCurrent=='home') echo 'active'; ?>"><a href="index.php">Home</a></li>
 				<li class="<?php if ($navCurrent=='sub') echo 'active'; ?>"><a href="subpage.php">Subpage</a></li>
 			</ul>
 		</nav>
+	</div>
 	
-	</header>
+	<div class="wrapper-canvas">
+	
+		<header id="header-global" class="header-global">
+			<nav id="nav-offcanvas" class="nav-offcanvas">
+				<a class="toggle-offcanvas" href="#">Menu</a>
+			</nav>
+		</header>

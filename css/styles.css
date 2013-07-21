@@ -85,21 +85,80 @@ p {
 	white-space: nowrap;
 }
 
-/*------------------------------------------------------------------------- Layout --*/
+/*--------------------
+	   FUNCTION
+--------------------*/
 
 body {
 	font: normal 16px/1.2 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
 }
 
+/*------------------------------------------------------------------------- Off-canvas Functionality --*/
+
+.wrapper-offcanvas {
+	background: #ccc;
+	display: none;	/* deal with FOUC */
+	position: absolute;
+	-webkit-transition: -webkit-transform 150ms ease;
+	-moz-transition: -moz-transform 150ms ease;
+	-o-transition: -o-transform 150ms ease;
+	transition: transform 150ms ease;
+	width: 85%;
+}
+	.nav-closed .wrapper-offcanvas,
+	.nav-open .wrapper-offcanvas {
+		display: block;	/* deal with FOUC */
+	}
+	.csstransforms3d .nav-closed .wrapper-offcanvas {
+		-webkit-transform: translate3d(-100%,0,0);
+		-moz-transform: translate3d(-100%,0,0);
+		-o-transform: translate3d(-100%,0,0);
+		transform: translate3d(-100%,0,0);
+	}
+		.no-csstransforms3d .nav-closed .wrapper-offcanvas {
+			left: -100%;
+		}
+	.csstransforms3d .nav-open .wrapper-offcanvas {
+		-webkit-transform: translate3d(0,0,0);
+		-moz-transform: translate3d(0,0,0);
+		-o-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+		.no-csstransforms3d .nav-open .wrapper-offcanvas {
+			left: 0;
+		}
+.wrapper-canvas {
+	position: relative;
+	-webkit-transition: -webkit-transform 150ms ease;
+	-moz-transition: -moz-transform 150ms ease;
+	-o-transition: -o-transform 150ms ease;
+	transition: transform 150ms ease;
+	width: 100%;
+}
+	.csstransforms3d .nav-closed .wrapper-canvas {
+		-webkit-transform: translate3d(0,0,0);
+		-moz-transform: translate3d(0,0,0);
+		-o-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+		.no-csstransforms3d .nav-closed .wrapper-canvas {
+			left: 0;
+		}
+	.csstransforms3d .nav-open .wrapper-canvas {
+		-webkit-transform: translate3d(85%,0,0);
+		-moz-transform: translate3d(85%,0,0);
+		-o-transform: translate3d(85%,0,0);
+		transform: translate3d(85%,0,0);
+	}
+		.no-csstransforms3d .nav-open .wrapper-canvas {
+			left: 85%;
+		}
+
 /*--------------------
-		HEADER
+	   LAYOUT
 --------------------*/
 
-.header-global {
-	
-}
-
-/*------------------------------------------------------------------------- Header Navigation --*/
+/*------------------------------------------------------------------------- Navigation --*/
 
 .nav-global {
 	
@@ -109,17 +168,19 @@ body {
 	font-weight: bold;
 }
 
-/*--------------------
-	   CONTENT
---------------------*/
+/*------------------------------------------------------------------------- Header --*/
+
+.header-global {
+	
+}
+
+/*------------------------------------------------------------------------- Content --*/
 
 article {
 	
 }
 
-/*--------------------
-		FOOTER
---------------------*/
+/*------------------------------------------------------------------------- Footer --*/
 
 .footer-global {
 	
@@ -132,6 +193,36 @@ article {
 /*------------------------------------------------------------------------- Large View --*/
 
 @media screen and (min-width: 641px) {
+	
+	/*-- Functionality --*/
+	
+	.wrapper-offcanvas {
+		background: #ccc;
+		display: block;
+		position: relative;
+		-webkit-transition: none;
+		-moz-transition: none;
+		-o-transition: none;
+		transition: none;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-o-transform: none;
+		transform: none;
+		width: 100%;
+	}
+	.wrapper-canvas {
+		-webkit-transition: none;
+		-moz-transition: none;
+		-o-transition: none;
+		transition: none;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-o-transform: none;
+		transform: none;
+	}
+	.nav-offcanvas {
+		display: none;
+	}
 	
 }
 
