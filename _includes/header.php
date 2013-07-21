@@ -28,21 +28,19 @@
 
 <body class="<?php echo $navCurrent; ?>">
 
-	<div class="wrapper-offcanvas">
-		<nav id="nav-global" class="nav-global">
-			<ul>
-				<li class="<?php if ($navCurrent=='home') echo 'active'; ?>"><a href="index.php">Home</a></li>
-				<li class="<?php if ($navCurrent=='sub') echo 'active'; ?>"><a href="subpage.php">Subpage</a></li>
-			</ul>
-		</nav>
-	</div>
-	
 	<div class="wrapper-canvas">
-	
+
 		<header id="header-global" class="header-global clearfix">
 			<nav id="nav-offcanvas" class="nav-offcanvas">
 				<a class="toggle-offcanvas" href="#">Menu</a>
 			</nav>
 			
 			<h1 class="title-global">reStart Boilerplate</h1>
+			
+			<nav id="nav-global" class="nav-global" role="navigation">
+				<ul>
+					<li class="<?php if ($navCurrent=='home') echo 'active'; ?>"><a href="index.php">Home</a></li>
+					<li class="<?php if ($navCurrent=='sub') echo 'active'; ?>"><a href="subpage.php">Subpage</a></li>
+				</ul>
+			</nav>
 		</header>
