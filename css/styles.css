@@ -1,0 +1,167 @@
+/* 
+	.js selector { } apply only on JavaScript enabled browsers, for use in hiding FOUC
+	.oldIE selector { } apply on Internet Explorer 7 and 8 
+	.ie selector { } apply on Internet Explorer 7-9
+	.ie7 selector { } apply only on Internet Explorer 7
+	.ie8 selector { } apply only on Internet Explorer 8
+	.ie9 selector { } apply only on Internet Explorer 9
+
+--------------------------------------------------------------------------- Colors 
+
+Black (text): #444
+Blue: #
+Red: #
+Etc.
+
+----------------------
+      CSS RESET
+--------------------*/
+ 
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins,
+kbd, q, s, samp, small, strong, tt, var, dl, dt,
+dd, ol, ul, li, fieldset, form, input, button, textarea, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    margin: 0; padding: 0;
+    border: 0;
+    border-radius: 0;	/* for iOS */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-weight: inherit; font-style: inherit; font-family: inherit;
+    line-height: 1;
+    text-decoration: none;
+    vertical-align: baseline;
+}
+html { overflow-y: scroll; }
+img, input, select { vertical-align: middle; }
+ol, ul { list-style: none; }
+a,
+label,
+input[type=button],
+input[type=submit],
+button { cursor: pointer; }
+input, select, textarea { font-family: inherit; }
+textarea { overflow: auto; } /* prevents scrollbar from showing up when unneeded in IE */
+table { border-collapse: collapse; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+sup, sub { line-height: 1; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+i, em { font-style: italic; }
+b, strong { font-weight: bold; }
+q:lang(en) { quotes: '&#8220;' '&#8221;' '&#8216;' '&#8217;'; }
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+
+/*--------------------
+		BASICS
+--------------------*/
+
+h1, h2, h3, h4, h5, h6,
+p {
+	margin-bottom: 15px;
+}
+
+/*-- Clearfix --*/
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.ie7 .clearfix { zoom: 1; }
+
+/*-- Image Replacement --*/
+
+.ir {
+	overflow: hidden;
+	text-indent: 200%;
+	white-space: nowrap;
+}
+
+/*------------------------------------------------------------------------- Layout --*/
+
+body {
+	font: normal 16px/1.2 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+}
+
+/*--------------------
+		HEADER
+--------------------*/
+
+.header-global {
+	
+}
+
+/*------------------------------------------------------------------------- Header Navigation --*/
+
+.nav-global {
+	
+}
+.nav-global .active a {
+	color: #900;
+	font-weight: bold;
+}
+
+/*--------------------
+	   CONTENT
+--------------------*/
+
+article {
+	
+}
+
+/*--------------------
+		FOOTER
+--------------------*/
+
+.footer-global {
+	
+}
+
+/*--------------------
+	MEDIA QUERIES
+--------------------*/
+
+/*------------------------------------------------------------------------- Large View --*/
+
+@media screen and (min-width: 641px) {
+	
+}
+
+/*--------------------
+		PRINT
+--------------------*/
+
+@media print {
+
+	* { background: #fff; }	
+	body { 
+		color: #000;
+		font: normal 16px/1.4 Georgia, 'Times New Roman', serif; 
+	}
+	
+	/*-- Hidden Elements --*/
+	
+	#selector { display: none; }
+	
+	/*-- Show link URLs --*/
+	
+	a:link, 
+	a:visited { 
+		color: blue; 
+		text-decoration: underline; 
+	}	
+	a:link:after, 
+	a:visited:after { 
+		content:" [" attr(href) "] "; 
+		font-size: 75%;
+	}
+
+}
