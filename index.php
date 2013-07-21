@@ -5,8 +5,9 @@
 	require_once('_includes/header.php')
 ?>
 
-	<article>
+	<article class="clearfix">
 	
+		<h1 class="title page"><?php echo $pageTitle; ?></h1>
 		<p>This is the homepage.</p>
 	
 	</article>

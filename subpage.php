@@ -5,8 +5,9 @@
 	include('_includes/header.php')
 ?>
 
-	<article>
+	<article class="clearfix">
 	
+		<h1 class="title-page"><?php echo $pageTitle; ?></h1>
 		<p>This is a subpage.</p>
 	
 	</article>

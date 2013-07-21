@@ -1,5 +1,5 @@
 		<footer id="footer-global" class="footer-global">
-			<p>&copy; <?php echo date('Y'); ?></p>
+			<p>GNU Public License | <a href="https://github.com/kmaida/reStart-boilerplate-php">reStart</a> <?php echo date('Y'); ?></p>
 		</footer>
 		
 	</div> <!-- /.wrapper-canvas -->

@@ -13,17 +13,16 @@ var res = {
 	
 	$body: $(document.body),
 
-//--- Init responsive functions
+/*--- Init responsive functions ---*/
 	init: function() {
 		// listeners for breakpoints should be defined before the respond() function is called
-		res.testRespond();
 		res.nav();
 		
 		// set up responsive javascript
 		res.setupRes();
 	},
 	
-//--- Initialize and set up jRespond
+/*--- Initialize and set up jRespond ---*/
 	setupRes: function() {
 		var jRes = jRespond([
 				{
@@ -66,26 +65,9 @@ var res = {
 		]);	
 	},
 	
-//--- Sample function to demonstrate using breakpoint custom events
-	testRespond: function() {
-		res.$body.on('enter-small', function(e) {
-			var isFirstLoad = !!e.prevBP === false;
-			
-			console.log('Initial pageload:', isFirstLoad, ' Entering:' + e.curBP, ' Leaving:', e.prevBP);
-		});
-		
-		res.$body.on('enter-large', function(e) {
-			var isFirstLoad = !!e.prevBP === false;
-			
-			console.log('Initial pageload:', isFirstLoad, ' Entering:' + e.curBP, ' Leaving:', e.prevBP);
-		});
-	},
-	
-//--- Offcanvas Navigation
+/*--- Offcanvas Navigation ---*/
 	nav: function() {
-		var $offcanvas = $('.wrapper-offcanvas'),
-			$canvas = $('.wrapper-canvas'),
-			$toggle = $canvas.find('.toggle-offcanvas');
+		var $toggle = $('.toggle-offcanvas');
 		
 		res.$body.on('enter-small', function(e) {
 			res.$body.addClass('nav-closed');
@@ -102,7 +84,7 @@ var res = {
 						.removeClass('nav-open')
 						.addClass('nav-closed');
 				}
-			});		
+			});
 		});
 		
 		res.$body.on('enter-large', function(e) {

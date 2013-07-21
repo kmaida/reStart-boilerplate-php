@@ -1,19 +1,12 @@
-/* 
-	.js selector { } apply only on JavaScript enabled browsers, for use in hiding FOUC
-	.oldIE selector { } apply on Internet Explorer 7 and 8 
-	.ie selector { } apply on Internet Explorer 7-9
-	.ie7 selector { } apply only on Internet Explorer 7
-	.ie8 selector { } apply only on Internet Explorer 8
-	.ie9 selector { } apply only on Internet Explorer 9
+/*
+ * reStart Boilerplate
+ * Author: Kim Maida 
+ * Author URI: <http://kim-maida.com>
+ * Source: <https://github.com/kmaida/reStart-boilerplate-php>
+ * License: GNU Public License
+*/
 
---------------------------------------------------------------------------- Colors 
-
-Black (text): #444
-Blue: #
-Red: #
-Etc.
-
-----------------------
+/*--------------------
       CSS RESET
 --------------------*/
  
@@ -49,21 +42,22 @@ table { border-collapse: collapse; border-spacing: 0; }
 caption, th, td { text-align: left; font-weight: normal; }
 sup, sub { line-height: 1; }
 h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+/*--------------------
+	   BASICS
+--------------------*/
+
+/*-- Normalize --*/
+
 i, em { font-style: italic; }
 b, strong { font-weight: bold; }
 q:lang(en) { quotes: '&#8220;' '&#8221;' '&#8216;' '&#8217;'; }
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+h1, h2, h3, h4, h5, h6, p { margin-bottom: 15px; }
+ul { list-style: outside disc; padding-left: 24px; }
+ol { list-style: outside decimal; padding-left: 24px; }
 del { text-decoration: line-through; }
 abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
-
-/*--------------------
-		BASICS
---------------------*/
-
-h1, h2, h3, h4, h5, h6,
-p {
-	margin-bottom: 15px;
-}
 
 /*-- Clearfix --*/
 
@@ -86,11 +80,11 @@ p {
 }
 
 /*--------------------
-	   FUNCTION
+	LAYOUT FUNCTION
 --------------------*/
 
 body {
-	overflow: hidden;	/* nothing should flow outside the body of the page -- necessary to handle offcanvas scrollbar behavior */
+	overflow: hidden;	/* nothing should flow outside the body of the page - necessary to handle offcanvas scrollbar behavior */
 }
 
 /*------------------------------------------------------------------------- Off-canvas Functionality --*/
@@ -105,29 +99,18 @@ body {
 	overflow: hidden;
 	position: absolute;
 		top: 0;
-	-webkit-transition: -webkit-transform 250ms ease;
-	-moz-transition: -moz-transform 250ms ease;
-	-o-transition: -o-transform 250ms ease;
-	transition: transform 250ms ease;
 	-webkit-transform: translate3d(-100%,0,0);
 	-moz-transform: translate3d(-100%,0,0);
 	-o-transform: translate3d(-100%,0,0);
 	transform: translate3d(-100%,0,0);
 	width: 85%;
 }
-.nav-global:not(:target) {
-	z-index: 1;
-}
 .nav-closed .nav-global ,
 .nav-open .nav-global  {
 	display: block;	/* deal with FOUC */
 }
-	.no-csstransforms3d .nav-closed .nav-global  {
-		left: -100%;
-	}
-	.no-csstransforms3d .nav-open .nav-global  {
-		left: 0;
-	}
+	.no-csstransforms3d .nav-closed .nav-global { left: -100%; }
+	.no-csstransforms3d .nav-open .nav-global { left: 0; }
 .wrapper-canvas {
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
@@ -150,12 +133,10 @@ body {
 		-o-transform: translate3d(85%,0,0);
 		transform: translate3d(85%,0,0);
 	}
-		.no-csstransforms3d .nav-open .wrapper-canvas {
-			left: 85%;
-		}
+	.no-csstransforms3d .nav-open .wrapper-canvas { left: 85%; }
 
 /*--------------------
-	   LAYOUT
+	 PRESENTATION
 --------------------*/
 
 body {
@@ -164,6 +145,22 @@ body {
 }
 .wrapper-canvas {
 	background: #fff;
+}
+
+/*------------------------------------------------------------------------- Header --*/
+
+.header-global {
+	
+}
+.toggle-offcanvas {
+	background: #ccc;
+	float: left;
+	padding: 3% 0;
+	text-align: center;
+	width: 15%;
+}
+.title-global {
+	text-align: center;
 }
 
 /*------------------------------------------------------------------------- Navigation --*/
@@ -176,25 +173,6 @@ body {
 	font-weight: bold;
 }
 
-/*------------------------------------------------------------------------- Header --*/
-
-.header-global {
-	
-}
-.nav-offcanvas {
-	float: left;
-	width: 15%;
-}
-.toggle-offcanvas {
-	background: #ccc;
-	display: block;
-	padding: 15% 0;
-	text-align: center;
-}
-.title-global {
-	text-align: center;
-}
-
 /*------------------------------------------------------------------------- Content --*/
 
 article {
@@ -205,6 +183,7 @@ article {
 
 .footer-global {
 	padding: 3%;
+	text-align: center;
 }
 
 /*--------------------
@@ -215,17 +194,11 @@ article {
 
 @media screen and (min-width: 641px) {
 	
-	/*-- Functionality --*/
+	/*-- Layout Function --*/
 	
 	.nav-global {
-		background: #ccc;
-		box-shadow: none;
 		display: block;
 		position: relative;
-		-webkit-transition: none;
-		-moz-transition: none;
-		-o-transition: none;
-		transition: none;
 		-webkit-transform: none;
 		-moz-transform: none;
 		-o-transform: none;
@@ -242,15 +215,25 @@ article {
 		-o-transform: none;
 		transform: none;
 	}
-	.nav-offcanvas {
+	.toggle-offcanvas {
 		display: none;
 	}
 	
+	/*-- Presentation --*/
+	
+	.nav-global {
+		background: #ccc;
+		box-shadow: none;
+	}
+	
+	.nav-global,
+	article,
+	.footer-global {
+		padding: 1.5% 3%;
+	}
 }
 
-/*--------------------
-		PRINT
---------------------*/
+/*------------------------------------------------------------------------- Print --*/
 
 @media print {
 
@@ -262,7 +245,8 @@ article {
 	
 	/*-- Hidden Elements --*/
 	
-	#selector { display: none; }
+	.header-global,
+	.footer-global { display: none; }
 	
 	/*-- Show link URLs --*/
 	
