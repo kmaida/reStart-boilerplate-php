@@ -28,7 +28,7 @@ footer, header, hgroup, menu, nav, section {
     text-decoration: none;
     vertical-align: baseline;
 }
-html { overflow-y: scroll; }
+html { overflow-y: scroll; -webkit-text-size-adjust: none; }
 img, input, select { vertical-align: middle; }
 ol, ul { list-style: none; }
 a,
@@ -58,6 +58,7 @@ ul { list-style: outside disc; padding-left: 24px; }
 ol { list-style: outside decimal; padding-left: 24px; }
 del { text-decoration: line-through; }
 abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
+pre,code { background: #eee; border: 1px solid #ccc; font-family: Consolas, 'Lucida Console', 'Courier New', serif; padding: 2%; }
 
 /*-- Clearfix --*/
 
