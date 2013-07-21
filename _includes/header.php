@@ -39,8 +39,10 @@
 	
 	<div class="wrapper-canvas">
 	
-		<header id="header-global" class="header-global">
+		<header id="header-global" class="header-global clearfix">
 			<nav id="nav-offcanvas" class="nav-offcanvas">
 				<a class="toggle-offcanvas" href="#">Menu</a>
 			</nav>
+			
+			<h1 class="title-global">reStart Boilerplate</h1>
 		</header>

@@ -90,13 +90,12 @@ p {
 --------------------*/
 
 body {
-	font: normal 16px/1.2 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+	overflow: hidden;	/* nothing should flow outside the body of the page -- necessary to handle offcanvas scrollbar behavior */
 }
 
 /*------------------------------------------------------------------------- Off-canvas Functionality --*/
 
 .wrapper-offcanvas {
-	background: #ccc;
 	display: none;	/* deal with FOUC */
 	position: absolute;
 	-webkit-transition: -webkit-transform 150ms ease;
@@ -133,7 +132,6 @@ body {
 	-moz-transition: -moz-transform 150ms ease;
 	-o-transition: -o-transform 150ms ease;
 	transition: transform 150ms ease;
-	width: 100%;
 }
 	.csstransforms3d .nav-closed .wrapper-canvas {
 		-webkit-transform: translate3d(0,0,0);
@@ -158,10 +156,19 @@ body {
 	   LAYOUT
 --------------------*/
 
+body {
+	background: #eee;
+	font: normal 16px/1.2 'Helvetica Neue', Helvetica, Arial, Verdana, sans-serif;
+}
+.wrapper-canvas {
+	background: #fff;
+	box-shadow: 0 0 5px #666;
+}
+
 /*------------------------------------------------------------------------- Navigation --*/
 
 .nav-global {
-	
+	padding: 10px;
 }
 .nav-global .active a {
 	color: #900;
@@ -173,17 +180,27 @@ body {
 .header-global {
 	
 }
+.nav-offcanvas {
+	background: #ccc;
+	float: left;
+	padding: 3% 0;
+	text-align: center;
+	width: 15%;
+}
+.title-global {
+	text-align: center;
+}
 
 /*------------------------------------------------------------------------- Content --*/
 
 article {
-	
+	padding: 3%;
 }
 
 /*------------------------------------------------------------------------- Footer --*/
 
 .footer-global {
-	
+	padding: 3%;
 }
 
 /*--------------------
