@@ -25,3 +25,7 @@ This was built because nearly every site or application I have created in the la
 
 Apache/PHP, but the files can easily be adapted to HTML-only if desired.
 
+##Demo
+
+View a [working demo](http://dev.kim-maida.com/reStart-boilerplate-php/) of this boilerplate.
+
