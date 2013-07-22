@@ -17,18 +17,19 @@
 </head>
 
 <body class="<?php echo $navCurrent; ?>">
+	<div class="wrapper-overflow">
 
-	<div class="wrapper-canvas">
-
-		<header id="header-global" class="header-global clearfix">
-			<a class="toggle-offcanvas" href="#">Menu</a>
-			
-			<h1 class="title-global">reStart Boilerplate</h1>
-			
-			<nav id="nav-global" class="nav-global" role="navigation">
-				<ul>
-					<li class="<?php if ($navCurrent=='home') echo 'active'; ?>"><a href="index.php">Home</a></li>
-					<li class="<?php if ($navCurrent=='sub') echo 'active'; ?>"><a href="subpage.php">Subpage</a></li>
-				</ul>
-			</nav>
-		</header>
+		<div class="wrapper-canvas">
+	
+			<header id="header-global" class="header-global clearfix">
+				<a class="toggle-offcanvas" href="#">Menu</a>
+				
+				<h1 class="title-global">reStart Boilerplate</h1>
+				
+				<nav id="nav-global" class="nav-global" role="navigation">
+					<ul>
+						<li class="<?php if ($navCurrent=='home') echo 'active'; ?>"><a href="index.php">Home</a></li>
+						<li class="<?php if ($navCurrent=='sub') echo 'active'; ?>"><a href="subpage.php">Subpage</a></li>
+					</ul>
+				</nav>
+			</header>

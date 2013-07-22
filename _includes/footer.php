@@ -1,8 +1,9 @@
-		<footer id="footer-global" class="footer-global">
-			<p>GNU Public License | <a href="https://github.com/kmaida/reStart-boilerplate-php">reStart</a> <?php echo date('Y'); ?></p>
-		</footer>
-		
-	</div> <!-- /.wrapper-canvas -->
+			<footer id="footer-global" class="footer-global">
+				<p>GNU Public License | <a href="https://github.com/kmaida/reStart-boilerplate-php">reStart</a> <?php echo date('Y'); ?></p>
+			</footer>
+			
+		</div> <!-- /.wrapper-canvas -->
+	</div> <!-- /.wrapper-overflow -->
 
 	<!-- JavaScript -->
 	<script src="js/libs/jquery-1.10.2.js"></script>

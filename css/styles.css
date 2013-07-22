@@ -84,8 +84,8 @@ pre,code { background: #eee; border: 1px solid #ccc; font-family: Consolas, 'Luc
 	LAYOUT FUNCTION
 --------------------*/
 
-body {
-	overflow: hidden;	/* nothing should flow outside the body of the page - necessary to handle offcanvas scrollbar behavior */
+.wrapper-overflow {
+	overflow: hidden;	/* necessary to handle offcanvas scrollbar behavior */
 }
 
 /*------------------------------------------------------------------------- Off-canvas Functionality --*/
