@@ -15,7 +15,7 @@ var res = {
 
 /*--- Init responsive functions ---*/
 	init: function() {
-		// listeners for breakpoints should be defined before the respond() function is called
+		// listeners for breakpoints should be defined before the setupRes() function is called
 		res.nav();
 		
 		// set up responsive javascript
