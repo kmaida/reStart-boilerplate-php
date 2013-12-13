@@ -7,7 +7,7 @@
 */
 
 /*--------------------
-      CSS RESET
+	  CSS RESET
 --------------------*/
  
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -17,16 +17,13 @@ dd, ol, ul, li, fieldset, form, input, button, textarea, label, legend, table, c
 tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-    margin: 0; padding: 0;
-    border: 0;
-    border-radius: 0;	/* for iOS */
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    font-weight: inherit; font-style: inherit; font-family: inherit;
-    line-height: 1;
-    text-decoration: none;
-    vertical-align: baseline;
+	margin: 0; padding: 0;
+	border: 0;
+	border-radius: 0;	/* for iOS */
+	font-weight: inherit; font-style: inherit; font-family: inherit;
+	line-height: 1;
+	text-decoration: none;
+	vertical-align: baseline;
 }
 html { overflow-y: scroll; -webkit-text-size-adjust: none; }
 ol, ul { list-style: none; }
@@ -35,6 +32,11 @@ caption, th, td { text-align: left; font-weight: normal; }
 sup, sub { line-height: 1; }
 h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+*,*:before,*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 /*--------------------
 	   BASICS
@@ -60,11 +62,11 @@ textarea { overflow: auto; } /* prevents scrollbar from showing up when unneeded
 
 .clearfix:before,
 .clearfix:after {
-    content: " ";
-    display: table;
+	content: " ";
+	display: table;
 }
 .clearfix:after {
-    clear: both;
+	clear: both;
 }
 .ie7 .clearfix { zoom: 1; }
 
