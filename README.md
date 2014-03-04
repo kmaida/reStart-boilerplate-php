@@ -12,7 +12,7 @@ This was built because nearly every site or application I have created in the la
 * [Modernizr](http://modernizr.com/) (version 2.6.2 - recommend you create your own custom build or download from [GitHub](https://github.com/Modernizr/Modernizr))
 * [Mobile First](http://www.lukew.com/resources/mobile_first.asp) / [Responsive Web Design](http://alistapart.com/article/responsive-web-design)
 	* Off-canvas Navigation (using transitions and 3D transforms with fallbacks)
-	* [jRespond](https://github.com/ten1seven/jRespond) (for implementation of breakpoint-specific functionality - recommend you download the latest version from ten1seven's GitHub repo)
+	* [jRespond](https://github.com/localpcguy/jRespond) (for implementation of breakpoint-specific functionality - recommend you download the latest version from localpcguy's GitHub repo)
 * [jQuery](http://jquery.com/download/) (version 1.x - recommend you download the version you need / upgrade to 2.x if not supporting older browsers)
 * [Google Analytics](http://www.google.com/analytics/) tracking snippet (fill in your ID)
 * CSS 
